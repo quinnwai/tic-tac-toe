@@ -139,11 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functions.cpp" />
     <ClCompile Include="lab3sol.cpp" />
-    <ClCompile Include="setup.cpp" />
+    <ClCompile Include="pieces.cpp" />
+    <ClCompile Include="game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="setup.h" />
+    <ClInclude Include="enums.h" />
+    <ClInclude Include="functions.h" />
+    <ClInclude Include="pieces.h" />
+    <ClInclude Include="game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,7 +11,7 @@ Purpose: declaring for relevant game information for the game board
 
 //indices corresponding to the vector which stores the game board dimensions. See the
 //setBoardDims function in "board.cpp" for implementation
-enum dimensions { idxNumRows, idxNumCols };
+enum dimensions { idxNumRows, idxNumCols};
 
 /*Parses through the first line of a txt file for the width and height of the game board
 */

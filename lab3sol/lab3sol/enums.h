@@ -13,4 +13,5 @@ Purpose: declare enumerations used within source files
 enum program {program_name, game_type, num_args};
 
 //different possible error types that may occur
-enum errors { success, cannot_open_file, incorrect_num_args, invalid_var_type, no_well_formed_pieces, vec_size_mismatch, no_game_type};
+enum errors { success, cannot_open_file, incorrect_num_args, invalid_var_type, no_well_formed_pieces,
+	vec_size_mismatch, no_game_type, quit_game, invalid_user_input, no_winning_moves};
