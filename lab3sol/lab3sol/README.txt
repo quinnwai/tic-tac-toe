@@ -18,7 +18,7 @@ Warnings:
 Test Cases:
 -Test invalid user input
    -Out of bounds: 0,0   0,1    1,0    5,1    1,5    5,5
-   -Invalid coordinates: 0.1    0 1    0,1 yeet      0.1,5    5,0.4
+   -Invalid coordinates: 0.1    0 1    0.1,5  5,0.4
    -Invalid strings:     quiT   Quit   qui    q a v  
 -Test valid user input
    -coordinates
@@ -31,9 +31,6 @@ Test Cases:
    -draw(): something like X O X 
                            X O X
                            O X O
-
-Extra Credit:
--
 
 Suggestions:
 -Hello! Within the second paragraph of the prompt() step, I think it would be good to explain that checking a valid

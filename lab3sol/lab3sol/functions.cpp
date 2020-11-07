@@ -12,12 +12,10 @@ Note: More in-depth function descriptions can be found in "functions.h".
 #include <iostream>
 #include <vector>
 #include <string>
-#include <fstream>
-#include <sstream>
 
 using namespace std;
 
-int getNumArgs(int argc, char* argv[]) { 
+int getNumArgs(int argc, char* argv[]) {
 	//check number of arguments
 	if (argc != num_args) {
 		cout << "Error " << incorrect_num_args << "..." << endl;
@@ -29,7 +27,7 @@ int getNumArgs(int argc, char* argv[]) {
 }
 
 int getGameType(char* argv[]) {
-	//generate name of gameType from first passed cmd line argument
+	//generate name of gameType from first passed cmd line argument by character
 	string gameType;
 	for (auto ptr = argv[game_type]; *ptr != '\0'; ptr++) {
 		gameType += *ptr;
@@ -42,13 +40,4 @@ int getGameType(char* argv[]) {
 	cout << "Game type not recognized" << endl;
 	cout << "Suggested usage: " << argv[program_name] << " TicTacToe" << endl;
 	return no_game_type;
-}
-
-int lowercase(string& str) {
-	for (size_t i = 0; str[i] != '\0'; ++i) {
-		if (65 <= str[i] && str[i] <= 90) {
-			str[i] = str[i] + 32;
-		}
-	}
-	return success;
 }

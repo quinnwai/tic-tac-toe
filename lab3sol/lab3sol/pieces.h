@@ -8,9 +8,6 @@ Note: I chose to leave the color variable within the game_pieces class just in c
 
 #include<string>
 
-//possible colors for game pieces
-enum class piece_color { red, blue, invalid_color };
-
 /*struct game_piece holds relevant variables (name and display name) and two constructors
 */
 struct game_piece {

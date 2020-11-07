@@ -13,7 +13,7 @@ Purpose: Defines the material declared in "game.h". Helps to set up the tic tac 
 
 using namespace std;
 
-//constructor definition
+//default constructor definition for TicTacToeGame
 TicTacToeGame::TicTacToeGame() {
 	Xs = game_piece("Xs", "X");
 	Os = game_piece("Os", "O");
@@ -23,14 +23,14 @@ TicTacToeGame::TicTacToeGame() {
 }
 
 //insertion operator overloading for TicTacToeGame class
-std::ostream& operator<<(std::ostream& out, const TicTacToeGame& game) { //passed in since cout is relaced at all locations
+std::ostream& operator<<(std::ostream& out, const TicTacToeGame& game) {
 	for (unsigned int i = boardWidth; i > 0; i--) {
 		//labelling index per row (shift by -1 to account for unsigned int)
 		out << i - 1;
 
 		//print game pieces
 		for (unsigned int j = 0; j < boardWidth; j++) {
-			out << game.board[i - 1][j].display_ << " "; //TODO: fix this
+			out << game.board[i - 1][j].display_ << " ";
 		}
 		out << endl;
 	}
@@ -75,7 +75,6 @@ bool TicTacToeGame::done() {
 				return true;
 			}
 		}
-			
 
 		//increment and set new vecIdx to index into the board of pieces
 		y++;
@@ -109,7 +108,7 @@ int TicTacToeGame::prompt(unsigned int& x, unsigned int& y) {
 	//iterate through string to replace , with a space (respective ASCII values of 44 and 32)
 	int numCommas = 0; //keept track for valid input
 	for (unsigned int i = 0; i < input.length(); i++) {
-		if (input[i] == 44) { //TODO: make sure this works
+		if (input[i] == 44) {
 			input[i] = 32;
 			++numCommas;
 		}
@@ -136,7 +135,7 @@ int TicTacToeGame::turn() {
 
 	//iterative check until user input is valid
 	while (p == invalid_user_input) {
-		//flush the cin/cout stream in the case of inputs with spaces
+		//flush the cin stream in the case of inputs with a space
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 		//re-prompt
@@ -197,20 +196,20 @@ int TicTacToeGame::play() {
 		}
 	}
 
-	//else (ie, done is true), display who won
-	cout << "After " << numRound << " rounds..." << endl;
-	if (numRound % 2 == 1) {
-		cout << "Player X wins!" << endl;
+	//if done is true, display who won
+	if (done()) {
+		cout << "After " << numRound << " rounds..." << endl;
+		if (numRound % 2 == 1) {
+			cout << "Player X wins!" << endl;
+		}
+		else {
+			cout << "Player O wins!" << endl;
+		}
 	}
-	else {
-		cout << "Player O wins!" << endl;
-	}
-	return success;
-
-	//if draw is true, then no one wins
-	if (draw()) {
+	else { //if draw is true, then no one wins
 		cout << "No moves remains" << endl;
 		cout << "This game is a draw" << endl;
 		return no_winning_moves;
 	}
+	return success;
 }
