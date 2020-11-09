@@ -5,6 +5,6 @@ Creating a working Tic Tac Toe game that can be run within command line using us
 
 ## Functionality
 Some highlights include...
--Keeping track of player moves
--Allowing user to quit out the game
--Multiple messages and return codes for possible errors
+- Keeping track of player moves
+- Allowing user to quit out the game
+- Multiple messages and return codes for possible errors
