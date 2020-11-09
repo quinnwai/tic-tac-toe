@@ -1,6 +1,6 @@
 Author: Quinn Wai Wong
 Email: qwong@wustl.edu
-Lab 2
+Purpose: This README documents some errors and warnings that appeared during the building process
 
 Errors (w/ Solutions if not apparent):
 -expected a type specifier (defined vector length in constructor rather than header file)
@@ -31,13 +31,3 @@ Test Cases:
    -draw(): something like X O X 
                            X O X
                            O X O
-
-Suggestions:
--Hello! Within the second paragraph of the prompt() step, I think it would be good to explain that checking a valid
- move can also be done in a different method like turn()
--Generally, I like the instructions this time because I had to work through understanding how all the methods interacted
- with each other to form the final game
--I think it might be good to note that these instructions are relatively flexible. For example, I didn't realize that more
- member variables like a counter and string to record moves might need to be added to the TicTacToeGame class because the
- instructions seemed to list out all I needed for the class.
-
